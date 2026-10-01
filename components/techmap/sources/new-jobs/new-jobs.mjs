@@ -106,6 +106,8 @@ export default {
         excludeDuplicates: this.excludeDuplicates,
         dateCreatedMin: this._toIsoDate(new Date(now.getTime() - lookbackDays * DAY_MS)),
         dateCreatedMax: this._toIsoDate(now),
+        // Newest first, so the first pages always contain the latest postings
+        sort: "newest",
       });
     },
     generateMeta(job) {

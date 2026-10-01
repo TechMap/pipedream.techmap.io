@@ -74,6 +74,23 @@ export default {
         "excludeDuplicates",
       ],
     },
+    sort: {
+      type: "string",
+      label: "Sort",
+      description: "Order of the results by the time the job posting was collected",
+      options: [
+        {
+          label: "Newest first",
+          value: "newest",
+        },
+        {
+          label: "Oldest first (stable order for paging through all results)",
+          value: "oldest",
+        },
+      ],
+      default: "newest",
+      optional: true,
+    },
     page: {
       type: "integer",
       label: "Page",
@@ -101,6 +118,7 @@ export default {
         skills: this.skills,
         language: this.language,
         excludeDuplicates: this.excludeDuplicates,
+        sort: this.sort,
         page: this.page,
       }),
     });

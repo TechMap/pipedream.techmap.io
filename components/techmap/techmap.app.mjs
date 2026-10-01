@@ -117,7 +117,7 @@ export default {
           : value;
       }
       if (excludeDuplicates) {
-        params.IsDuplicate = "false";
+        params.isDuplicate = "false";
       }
       return params;
     },
